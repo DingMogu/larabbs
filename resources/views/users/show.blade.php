@@ -13,7 +13,6 @@
           <p>{{ $user->introduction }} </p>
           <hr>
           <h5><strong>注册于</strong></h5>
-          <!--{{ dd($user->created_at) }} Carbon对象 php知名日期和时间操作扩展-->
           <p>{{ $user->created_at->diffForHumans() }}</p>
         </div>
       </div>
