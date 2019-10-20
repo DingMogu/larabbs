@@ -22,6 +22,7 @@ class TopicsController extends Controller
         $topics = $topic->withOrder($request->order)->paginate(20);
         return view('topics.index', compact('topics'));
     }
+
     public function show(Topic $topic)
     {
         return view('topics.show', compact('topic'));
@@ -41,6 +42,7 @@ class TopicsController extends Controller
 
         return redirect()->route('topics.show', $topic->id)->with('success', '帖子创建成功！');
     }
+
 	public function edit(Topic $topic)
 	{
         $this->authorize('update', $topic);
